@@ -1,0 +1,382 @@
+// Import external libraries.
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "toolkit";
+
+// Import variables, abstractions, base styles and components using globbing.
+//
+// Globbing will always import files alphabetically. Optimally, all your
+// components should be self-contained and explicit enough to not have any
+// contained styles leak into unrelated components: The import order should not
+// affect the result.
+//
+// If there are variables, functions or mixins that depend on each other and
+// therefore need to be imported in a specific order you can import them
+// directly. Variables-, function- or mixin providing partials should never
+// output any styles themselves: Importing them multiple times to resolve
+// dependencies shouldn't be a problem.
+@import "variables/**/*";
+@import "abstractions/**/*";
+@import "base/**/*";
+@import "components/**/*";
+
+//$mobile-first: true;
+$output:float;
+
+$break: 320px;
+$break1: 480px, 'no-query' '.lt-ie9';
+$break2: 720px, 'no-query' '.lt-ie9';
+$break3: 960px, 'no-query' '.lt-ie9';
+$break4: 1280px, 'no-query' '.lt-ie9';
+
+$grids: 4; //
+$grids: add-grid(6 at 320px); // Mobile
+$grids: add-grid(9 at 480px); // Mobile (Landscape)
+$grids: add-grid(12 at 720px); // Tablet (Portrait)
+$grids: add-grid(12 at 960px); // Desktop
+$grids: add-grid(12 at 1280px); // Desktop
+$gutters: .1;
+
+body {
+	background-color: #ffffff;
+	font-family: raleway,sans-serif;
+}
+a {
+	font-weight: bold;
+	color: $ref-green-dark;
+	text-decoration: none;
+	&:hover {
+		color: $ref-grey-dark;
+	}
+}
+textarea, input, select {
+	background-color: rgba(229, 229, 229, 1);
+    border: 0 solid transparent;
+    color: #383838;
+    font: 16px/1.2em raleway,sans-serif;
+}    
+#page-wrapper {
+    #headerbar {
+	 	background-color: $ref-grey;
+	    height: 78px;
+	    width: 100%;
+	    margin: 6% 0 0;    
+    }
+	#page {
+	    width: 980px;
+	    margin:0 auto;
+    	#header {
+    		margin: -7.5% auto;
+    		width: 980px;
+    		height: 100px;
+       	    .section {
+				margin: -3% 9%;
+    			width: 82%;
+    			.logo {
+					float: left;
+    				width: 11%;    			
+    			}
+	    		#name-and-slogan {
+ 					margin: auto;
+    				padding-top: 4%;		
+					#site-name {
+						a {
+							color: $ref-green-dark;
+						}	
+					}	
+	    		}
+	    	}
+	    }
+	    #navigation {
+			margin: -4.7% 40%;
+			width: 63%;	    
+	    	.section {
+	    		#main-menu {
+				    li {
+				    	width: 17% !important;
+				    	a {
+				    		color: $ref-green;
+				    	}
+				    	.active {
+				    		color: $ref-green;
+				    		text-decoration: none;
+				    	} 
+				    } 			
+	    		}
+	    	}
+	    }
+	    #breadcrumb {
+	    	display: none;
+	    }
+	    #main-wrapper {
+		    width: 980px;
+			margin: 6% auto auto;		    
+		    #main {
+		    	#content {
+				    color: #383838;
+				    font-size: 11pt;
+		    		.section1 {
+					    float: left;
+					    height: 378px;
+					    margin: 5%;
+					    width: 42%;
+					    border-radius: 50%;
+						background-color: $ref-green;
+    					border: 0 solid $ref-green;
+    					.rupees {
+  							margin: -3%;
+    						width: 100%;    						
+    					}				    
+    	    		}
+		    		.section2 {
+    					width: 46%;
+					    height: 477px;
+						overflow: hidden;
+						span {
+							 font-size: 36px;
+							 color: $ref-grey-dark;
+							 h1, h2, h3, h4, h5 {
+							 	margin: 0;
+							 }
+						}
+						.round1 {
+							border: 4px solid #ea944a;
+							border-radius: 54%;
+							height: 27%;
+							width: 29%;
+							float: left;
+							margin: 8% 2%;
+							span {
+								font-weight: normal;
+								font-size: 9pt;
+								display: inline-block;
+ 								margin-left: 30%;
+    							margin-top: 39%;								
+							}
+							a {
+								color: $ref-grey-dark;
+								&:hover {
+									color: $ref-green-dark !important;
+								}							
+							}
+    					}
+						.round2 {
+							border: 4px solid #F4A631;
+							border-radius: 54%;
+							height: 27%;
+							width: 29%;
+							float: left;
+							margin: 8% 2%;
+							span {
+								font-weight: normal;
+								font-size: 9pt;
+								display: inline-block;
+ 								margin-left: 30%;
+    							margin-top: 39%;								
+							}
+							a {
+								color: $ref-grey-dark;
+								&:hover {
+									color: $ref-green-dark !important;
+								}							
+							}
+    					}
+    					.round3 {
+							border: 4px solid #F8D033;
+							border-radius: 54%;
+							height: 27%;
+							width: 29%;
+							float: left;
+							margin: 8% 2%;
+							span {
+								font-weight: normal;
+								font-size: 9pt;
+								display: inline-block;
+ 								margin-left: 30%;
+    							margin-top: 39%;								
+							}
+							a {
+								color: $ref-grey-dark;
+								&:hover {
+									color: $ref-green-dark !important;
+								}							
+							}
+    					}
+    					.round1-pencil {
+							width: 56px;
+							margin: -74% 1%;
+						}  					
+    					.round2-aboutus {
+							margin: -74% 1%;
+							width: 56px;
+							left: 66%;
+						}  					
+    					.round3-contact {
+							margin: -74% 1%;
+							width: 56px;
+							left: 77%;
+						}
+						.content-text {
+							font-size: 23px;
+							color: #818181;
+							.content-orange {
+								color: $ref-orange;
+								margin-top: 2%;
+							}
+						}  					
+		    		}
+		    		#referral-node-form {
+						margin: auto;
+    					padding: 3%;
+    					width: 65%;		    		
+						.form-item { 
+							label {
+								font-size: 1em;
+								color: #222;
+								float: left;
+								width: 120px;
+							}
+							.form-textarea-wrapper textarea {
+								width: 78% !important;
+							}
+							.grippie {
+								display: none;
+							}							
+						}
+						#edit-actions {
+						    margin: auto;
+						    width: 57%;
+						}
+						.form-submit {
+						    background: #f8d033 none repeat scroll 0 0;
+						    border: 0 none;
+						    color: #fefdfd;
+						    font-size: 21px;
+						    height: 32px;
+						    width: 30%;
+						}						
+					}
+		    	}
+		    }
+	    }
+	    #footer {
+	    	background-color: $ref-green;
+		    right: 0;
+  			bottom: auto;
+    		height: 166px;
+    		left: 0;
+    		position: absolute;
+    		width: 100%;
+    		.section {
+			    height: 166px;
+			    margin: auto;
+			    width: 980px;
+				.call {
+					border: 4px solid #F8D033;
+					background-color: #F8D033;
+					border-radius: 54%;
+					height: 27%;
+					width: 5%;
+					float: left;
+					margin: 6% 9%;
+				}
+				.contact {
+					border: 4px solid #F8D033;
+					background-color: #F8D033;
+					border-radius: 54%;
+					height: 27%;
+					width: 5%;
+					float: left;
+					margin: 6% 7%;
+				}
+				.followme {
+					border: 4px solid #F8D033;
+					background-color: #F8D033;
+					border-radius: 54%;
+					height: 27%;
+					width: 5%;
+					float: left;
+					margin: 6% 11%;
+				}
+				.copyright {
+					border: 4px solid #F8D033;
+					background-color: #F8D033;
+					border-radius: 54%;
+					height: 27%;
+					width: 5%;
+					float: left;
+					margin: 6% 4%;
+				}
+				.call-icon {
+					margin: -16% -22%;
+				    width: 35px;				
+				}			      		
+				.contact-icon {
+					margin: -16% -22%;
+				    width: 35px;				
+				}			      		
+				.followme-icon {
+					margin: -16% -22%;
+				    width: 35px;				
+				}			      		
+				.copyright-icon {
+					margin: -16% -22%;
+				    width: 35px;				
+				}
+				.call-text {
+					margin: -73% 122%;
+				    width: 100px;
+				    color: $ref-grey-light;
+				    p {
+				    	margin: 0;
+				    	font-size: 13px;
+				    	.title {
+				    		font-weight: bold;
+				    		font-size: 15px;
+				    	}
+				    }
+   				}	      		
+				.contact-text {
+					margin: -73% 122%;
+				    width: 100px;
+				    color: $ref-grey-light;
+				    p {
+				    	margin: 0;
+				    	font-size: 13px;
+				    	.title {
+				    		font-weight: bold;
+				    		font-size: 15px;
+				    	}
+				    }
+   				}	      		
+				.followme-text {
+					margin: -73% 122%;
+				    width: 100px;
+				    color: $ref-grey-light;
+				    p {
+				    	margin: 0;
+				    	font-size: 13px;
+				    	.title {
+				    		font-weight: bold;
+				    		font-size: 15px;
+				    	}
+				    }
+   				}	      		
+				.copyright-text {
+					margin: -73% 122%;
+				    width: 150px;
+				    color: $ref-grey-light;
+				    p {
+				    	margin: 0;
+				    	font-size: 13px;
+				    }
+   				}	      		
+    		}		    
+	    }
+	    .messages--error, .messages--status {
+	    	margin-top: 4%;
+	    }
+	}	
+}
+

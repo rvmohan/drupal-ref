@@ -1,0 +1,26 @@
+name = Referral Theme
+description = Referral theme based on Omega theme.
+base theme = omega
+screenshot = screenshot.png
+engine = phptemplate
+core = 7.x
+
+; Styles
+stylesheets[all][] = css/referral.normalize.css
+stylesheets[all][] = css/referral.hacks.css
+stylesheets[all][] = css/referral.styles.css
+stylesheets[all][] = css/referral.no-query.css
+
+; Scripts
+scripts[] = js/referral.behaviors.js
+
+; Regions
+regions[branding]       = Branding
+regions[header]         = Header
+regions[navigation]     = Navigation
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[content]        = Content
+regions[sidebar_first]  = First Sidebar
+regions[sidebar_second] = Second Sidebar
+regions[footer]         = Footer

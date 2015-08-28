@@ -1,0 +1,72 @@
+$ref-purple: #c1b0f5;
+$ref-blue: #9dbfe9;
+$ref-grey: #dddddd;
+$ref-white: #ffffff;
+$ref-green: #3bbab5;
+$ref-green-dark:#33958f;
+$ref-orange: #EA944A;
+$ref-blue-dark: #7ea3d0;
+$ref-red: #fd9b9b;
+$ref-red-dark: #ea7979;
+$ref-grey-light: #e5e5e5;
+$ref-grey-medium: #999999;
+$ref-grey-dark: #818181;
+$ref-purple-dark: #977ee3;
+$ref-btn-grey: #c2c2c2;
+$ref-btn-grey-hover: #A5A5A5;
+
+$ref-brown: #8a68b2;
+$ref-brown-hover: #71549e;
+$ref-border: #EAEAEA;
+$ref-border-dark: #dce3e6;
+$ref-text-bold: #434343;
+
+@mixin hover-state($color,$hover){
+  background-color: $color;
+  &:hover{
+    background-color: $hover;
+  }
+}
+
+%bg-grey{
+  background-color: $ref-grey;
+}
+%bg-green{
+  background-color: $ref-green;
+  color: $ref-white;
+}
+%bg-blue{
+  background-color: $ref-blue;
+  color: $ref-white;
+}
+%bg-red{
+  background-color: $ref-red;
+  color: $ref-white;
+}
+%bg-grey-light{
+  background-color: $ref-grey-light;
+}
+%bg-purple{
+  background-color: $ref-purple;
+}
+%bg-purple-hover{
+  background-color: $ref-purple-dark;
+}
+
+.hover-green{
+  @include hover-state($ref-green,$ref-green-dark);
+}
+
+.hover-blue{
+  @include hover-state($ref-blue,$ref-blue-dark);
+}
+
+.hover-purple{
+  @include hover-state($ref-purple,$ref-purple-dark);
+}
+.hover-brown{
+  @include hover-state($ref-brown,$ref-brown-hover);
+}
+.hover-grey {
+  @include hover-state($ref-btn-grey,$ref-btn-grey-hover);
+}
